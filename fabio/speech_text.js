@@ -13,7 +13,7 @@ const API_KEY= 'bed6f38640b57e662b11cad208212e4f2328d202';  // Replace with your
 // Read the audio file
 const audio = fs.readFileSync('./französisch_simple.mp3');
 const lg_typ ='fr'
-fetch(`https://api.deepgram.com/v1/listen?smart_format=true&model=nova-2&language=${lg_typ}`, {
+fetch(`https://api.deepgram.com/v1/listen?smart_format=true&model=general&language=${lg_typ}`, {
     method: 'POST',
     headers: {
         'Authorization': `Token ${API_KEY}`,
