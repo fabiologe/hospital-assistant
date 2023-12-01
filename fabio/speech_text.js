@@ -11,7 +11,7 @@ import { readFileSync } from 'fs';
 const API_KEY= 'bed6f38640b57e662b11cad208212e4f2328d202';  // Replace with your Deepgram API key
 
 // Read the audio file
-const audio = fs.readFileSync('C:/Users/Chef/Desktop/00-Projects/javascipt/langchain/französisch.mp3');
+const audio = fs.readFileSync('./französisch_simple.mp3');
 const lg_typ ='fr'
 fetch(`https://api.deepgram.com/v1/listen?smart_format=true&model=nova-2&language=${lg_typ}`, {
     method: 'POST',
