@@ -110,7 +110,7 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn> See templates </v-btn>
+            <v-btn to="/pregnancy"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
