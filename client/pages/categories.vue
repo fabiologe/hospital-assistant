@@ -32,11 +32,11 @@ export default {
     <v-row align="center" justify="center">
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>Emergency</v-card-title>
+          <v-card-title>Emergency Department</v-card-title>
 
           <v-card-item>
             <v-card-subtitle
-              >Templates to use when patient arrives in emergency
+              >For the admission and treatment of a patient in an emergency 
               room</v-card-subtitle
             >
           </v-card-item>
@@ -48,17 +48,17 @@ export default {
       </v-col>
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>Emergency</v-card-title>
+          <v-card-title>Pre-operative assessment</v-card-title>
 
           <v-card-item>
             <v-card-subtitle
-              >Templates to use when patient arrives in emergency
+              >Informing the patient about the operation and the processes included
               room</v-card-subtitle
             >
           </v-card-item>
 
           <v-card-actions>
-            <v-btn> See templates </v-btn>
+            <v-btn to="/preoperativeassessment> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col></v-row
@@ -66,11 +66,45 @@ export default {
     <v-row align="center" justify="center">
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>Emergency</v-card-title>
+          <v-card-title>Preparation for surgery</v-card-title>
 
           <v-card-item>
             <v-card-subtitle
-              >Templates to use when patient arrives in emergency
+              >To prepare the patient for transport to surgery room
+              room</v-card-subtitle
+            >
+          </v-card-item>
+
+          <v-card-actions>
+            <v-btn to="/preparationforsurgery"> See templates </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+      <v-col cols="auto">
+        <v-card class="mx-auto" width="400" color="primary" variant="tonal">
+          <v-card-title>X-Ray</v-card-title>
+
+          <v-card-item>
+            <v-card-subtitle
+              >Preparing the patient for X-ray
+              room</v-card-subtitle
+            >
+          </v-card-item>
+
+          <v-card-actions>
+            <v-btn to="/xray"> See templates </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col></v-row
+    >
+    <v-row align="center" justify="center">
+      <v-col cols="auto">
+        <v-card class="mx-auto" width="400" color="primary" variant="tonal">
+          <v-card-title>Title</v-card-title>
+
+          <v-card-item>
+            <v-card-subtitle
+              >sub
               room</v-card-subtitle
             >
           </v-card-item>
@@ -82,51 +116,17 @@ export default {
       </v-col>
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>Emergency</v-card-title>
+          <v-card-title>Other</v-card-title>
 
           <v-card-item>
             <v-card-subtitle
-              >Templates to use when patient arrives in emergency
+              >Live Translator, Meal plan, Directions, etc.
               room</v-card-subtitle
             >
           </v-card-item>
 
           <v-card-actions>
-            <v-btn> See templates </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col></v-row
-    >
-    <v-row align="center" justify="center">
-      <v-col cols="auto">
-        <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>Emergency</v-card-title>
-
-          <v-card-item>
-            <v-card-subtitle
-              >Templates to use when patient arrives in emergency
-              room</v-card-subtitle
-            >
-          </v-card-item>
-
-          <v-card-actions>
-            <v-btn> See templates </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col cols="auto">
-        <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>Emergency</v-card-title>
-
-          <v-card-item>
-            <v-card-subtitle
-              >Templates to use when patient arrives in emergency
-              room</v-card-subtitle
-            >
-          </v-card-item>
-
-          <v-card-actions>
-            <v-btn> See templates </v-btn>
+            <v-btn to="/other"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col></v-row
