@@ -28,37 +28,87 @@
 </template>
 
 <script>
-import img1 from '@/assets/images/flags/us.jpg'
-import img2 from '@/assets/images/flags/french.jpg'
-import img3 from '@/assets/images/flags/spain.jpg'
-import img4 from '@/assets/images/flags/china.png'
-import img5 from '@/assets/images/flags/arabic.png'
+import img_de from '@/assets/images/flags/more_flags/de.png'
+import img_en from '@/assets/images/flags/us.jpg'
+import img_fr from '@/assets/images/flags/more_flags/fr.png'
+
+import img_it from '@/assets/images/flags/more_flags/it.png'
+import img_es from '@/assets/images/flags/more_flags/es.png'
+import img_pt from '@/assets/images/flags/more_flags/pt.png'
+
+import img_nl from '@/assets/images/flags/more_flags/nl.png'
+
+import img_se from '@/assets/images/flags/more_flags/se.png'
+import img_tr from '@/assets/images/flags/more_flags/tr.png'
+import img_ua from '@/assets/images/flags/more_flags/ua.png'
+
+import img_id from '@/assets/images/flags/more_flags/id.png'
+import img_pl from '@/assets/images/flags/more_flags/pl.png'
+
+import img_kr from '@/assets/images/flags/more_flags/kr.png'
+import img_jp from '@/assets/images/flags/more_flags/jp.png'
 
 export default {
   data() {
     return {
-      locale: 'en',
+      locale: 'de',
       items: [
         {
+          value: 'de',
+          src: img_de,
+          title: 'German'
+        }, {
           value: 'en',
-          src: img1,
+          src: img_en,
           title: 'English'
         }, {
           value: 'fr',
-          src: img2,
+          src: img_fr,
           title: 'French'
         }, {
+          value: 'it',
+          src: img_it,
+          title: 'Italien'
+        }, {
           value: 'es',
-          src: img3,
+          src: img_es,
           title: 'Spanish'
         }, {
-          value: 'zh',
-          src: img4,
-          title: 'Chinese'
+          value: 'pt',
+          src: img_pt,
+          title: 'Portuguese'
         }, {
-          value: 'ar',
-          src: img5,
-          title: 'Arabic'
+          value: 'nl',
+          src: img_nl,
+          title: 'Dutch'
+        }, {
+          value: 'se',
+          src: img_se,
+          title: 'Swedish'
+        }, {
+          value: 'tr',
+          src: img_tr,
+          title: 'Turkish'
+        }, {
+          value: 'ua',
+          src: img_ua,
+          title: 'Ukraine'
+        }, {
+          value: 'id',
+          src: img_id,
+          title: 'Indonesian'
+        }, {
+          value: 'pl',
+          src: img_pl,
+          title: 'Polish'
+        }, {
+          value: 'kr',
+          src: img_kr,
+          title: 'Korean'
+        }, {
+          value: 'jp',
+          src: img_jp,
+          title: 'Japanese'
         }
       ]
     }
