@@ -6,7 +6,7 @@ import * as dotenv from "dotenv";
 import path from 'path';
 import fs from 'fs';
 
-let rawdata = fs.readFileSync('C:/Users/Chef/Desktop/00-Projects/javascipt/langchain/hospital_info.json');
+let rawdata = fs.readFileSync('./hospital_info.json');
 let hospital_info = JSON.parse(rawdata);
 
 
