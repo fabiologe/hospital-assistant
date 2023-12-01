@@ -1,0 +1,43 @@
+{
+    "departments": [
+        {
+            "name": "Radiology",
+            "location": "Building 2, Ground Floor"
+        },
+        {
+            "name": "Cardiology",
+            "location": "Main Building, Level 3"
+        },
+        {
+            "name": "Emergency",
+            "location": "Main Building, Level 1"
+        },
+        {
+            "name": "Cafetaria",
+            "location":"Main Building, Level -1"
+        }
+    ],
+    "services": [
+        {
+            "name": "MRI Scan",
+            "department": "Radiology",
+            "timing": "9 AM to 5 PM, Monday to Friday"
+        },
+        {
+            "name": "Cardiac Checkup",
+            "department": "Cardiology",
+            "timing": "9 AM to 3 PM, Monday to Friday"
+        },
+        {
+            "name": "Emergency Services",
+            "department": "Emergency",
+            "timing": "24x7"
+        },{
+            "name": "Cafetaria",
+            "timing":"9 AM to 3 PM, Monday to Friday",
+            "todays dish": "fish and chips with salad for 4.00€"
+        }
+    ],
+    "visiting_hours": "10 AM to 8 PM, Monday to Sunday",
+    "contact": "+1 123 456 7890"
+}
