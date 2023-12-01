@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from "nuxt";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -10,28 +10,33 @@ export default defineNuxtConfig({
       {
         hid: "description",
         name: "description",
-        content: "Responsive Bootstrap 5 Admin Dashboard"
-      }
+        content: "Responsive Bootstrap 5 Admin Dashboard",
+      },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   server: {
     port: 3000, // default: 3000
     host: "0.0.0.0", // default: localhost
+    hmr: {
+      port: 443,
+      clientPort: 443,
+    },
   },
 
+  
   /*
    ** Global CSS
    */
   css: [
-    'vuetify/lib/styles/main.sass',
-    'mdi/css/materialdesignicons.min.css',
-    '~/scss/global.scss'
+    "vuetify/lib/styles/main.sass",
+    "mdi/css/materialdesignicons.min.css",
+    "~/scss/global.scss",
   ],
 
   build: {
-    transpile: ['vuetify']
+    transpile: ["vuetify"],
   },
   /*
    ** Plugins to load before mounting the App
@@ -49,7 +54,7 @@ export default defineNuxtConfig({
    ** See https://nuxtjs.org/api/configuration-components
    */
   components: true,
-  
+
   /*
    ** Nuxt.js modules
    */
@@ -66,4 +71,4 @@ export default defineNuxtConfig({
   //     sync: true,
   //   },
   // }
-})
+});

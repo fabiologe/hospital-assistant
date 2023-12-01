@@ -2,13 +2,14 @@ import express from "express";
 import http from "http";
 import bodyParser from "body-parser";
 import { Server } from "socket.io";
+import initMongo from "./config/mongo.js";
 
 const app = express();
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://health.tobi4s.dev", "http://localhost:3000"], // Your frontend server
+    origin: ["https://health.tobi4s.dev", "http://128.140.33.144:3000"], // Your frontend server
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -42,3 +43,5 @@ io.on("connection", (socket) => {
 server.listen(3001, () => {
   console.log("listening on *:3001");
 });
+
+initMongo();

@@ -28,10 +28,56 @@ export default {
 </script>
 
 <template>
-  <div>
-    <!-- <PageHeader :title="title" :items="items" /> -->
-    What if you want to
+  <div class="options-wrapper">
+    <v-card
+      class="mx-auto mb-4"
+      max-width="344"
+      color="primary"
+      variant="tonal"
+    >
+      <v-card-item>
+        <v-card-title>Template Interactions</v-card-title>
+
+        <v-card-subtitle
+          >Reoccuring interactions, like filling out a document or getting
+          information about a patients current well-being.</v-card-subtitle
+        >
+      </v-card-item>
+
+      <v-card-actions>
+        <v-btn to="/categories"> See categories </v-btn>
+      </v-card-actions>
+    </v-card>
+    <v-card
+      class="mx-auto mb-4"
+      max-width="344"
+      color="primary"
+      variant="tonal"
+    >
+      <v-card-item>
+        <v-card-title>Custom Interaction</v-card-title>
+
+        <v-card-subtitle
+          >Use the Health AI Assistant as a context aware
+          translator.</v-card-subtitle
+        >
+      </v-card-item>
+
+      <v-card-actions>
+        <v-btn> Start chat </v-btn>
+      </v-card-actions>
+    </v-card>
   </div>
 </template>
 
-<style></style>
+<style>
+.options-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+</style>
