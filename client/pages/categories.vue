@@ -100,11 +100,11 @@ export default {
     <v-row align="center" justify="center">
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>Title</v-card-title>
+          <v-card-title>Pregnancy</v-card-title>
 
           <v-card-item>
             <v-card-subtitle
-              >sub
+              >For pregnancy related topics
               room</v-card-subtitle
             >
           </v-card-item>
