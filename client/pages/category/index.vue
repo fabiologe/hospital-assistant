@@ -47,29 +47,31 @@ export default {
 
           <v-card-item>
             <v-card-subtitle>{{
-              $t(categories.department_emergency.description)
+              $t("categories.department_emergency.description")
             }}</v-card-subtitle>
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/emergency">{{ $t(templates.init) }}</v-btn>
+            <v-btn to="/category/emergency">{{ $t("templates.init") }}</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
           <v-card-title>{{
-            $t(templates.type.pre_operation.title)
+            $t("categories.child_station.title")
           }}</v-card-title>
 
           <v-card-item>
             <v-card-subtitle>{{
-              $t(templates.type.pre_operation.description)
+              $t("categories.child_station.description")
             }}</v-card-subtitle>
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/preoperativeassessment"> See templates </v-btn>
+            <v-btn to="/category/childstation">
+              {{ $t("templates.see_templates") }}
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col></v-row
@@ -77,11 +79,13 @@ export default {
     <v-row align="center" justify="center">
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>{{ $t(templates.pre_operation.title) }}</v-card-title>
+          <v-card-title>{{
+            $t("categories.pre_operation.title")
+          }}</v-card-title>
 
           <v-card-item>
             <v-card-subtitle>{{
-              $t(templates.pre_operation.description)
+              $t("categories.pre_operation.description")
             }}</v-card-subtitle>
           </v-card-item>
 
@@ -92,11 +96,11 @@ export default {
       </v-col>
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>{{ $t(templates.type.Xray.title) }}</v-card-title>
+          <v-card-title>{{ $t("categories.xray.title") }}</v-card-title>
 
           <v-card-item>
             <v-card-subtitle>{{
-              $t(templates.type.Xray.description)
+              $t("categories.xray.description")
             }}</v-card-subtitle>
           </v-card-item>
 
@@ -116,17 +120,17 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn>{{ $t(templates.init) }}</v-btn>
+            <v-btn>{{ $t("templates.init") }}</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>{{ $t(templates.other.title) }}</v-card-title>
+          <v-card-title>{{ $t("categories.other.title") }}</v-card-title>
 
           <v-card-item>
             <v-card-subtitle>{{
-              $t(templates.other.description)
+              $t("categories.other.description")
             }}</v-card-subtitle>
           </v-card-item>
 

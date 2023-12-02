@@ -56,28 +56,30 @@
     "department_emergency": {
       "title": "Emergency Department",
       "description": "For the admission and treatment of a patient in an emergency room"
+    },
+    "pre_operation": {
+      "title": "Pre-Operative assesment",
+      "description": "nforming the patient about the operation and the processes included room"
+    },
+    "xray": {
+      "title": "X-Ray",
+      "description": "Preparing the patient for X-ray room"
+    },
+    "pre_sugery": {
+      "title": "Preparation for surgery",
+      "description": "To prepare the patient for transport to surgery room"
+    },
+    "other": {
+      "title": "Other",
+      "description": "Live Translator, Meal plan, Directions, etc. room"
+    },
+    "child_station": {
+      "title": "Child Station",
+      "description": "For conversations with parents about their kids"
     }
   },
   "templates": {
-    "init": "See templates",
-    "type": {
-     "pre_operative": {
-      "title": "Pre-Operative assesment",
-      "description": "nforming the patient about the operation and the processes included room"
-     },
-     "Xray": {
-      "title": "X-Ray",
-      "description": "Preparing the patient for X-ray room"
-     },
-     "pre_sugery":{
-      "title": "Preparation for surgery",
-      "description": "To prepare the patient for transport to surgery room"
-     },
-     "other": {
-      "title": "Other",
-      "description": "Live Translator, Meal plan, Directions, etc. room"
-     }
-    }
+    "see_templates": "See templates"
   },
   "menuitems": {
     "menu": {
