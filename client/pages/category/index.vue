@@ -52,7 +52,9 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/emergency">{{ $t("templates.init") }}</v-btn>
+            <v-btn :to="'/category/emergency/' + $i18n.locale">{{
+              $t("templates.see_templates")
+            }}</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -69,7 +71,7 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/childstation">
+            <v-btn :to="'/category/childstation/' + $i18n.locale">
               {{ $t("templates.see_templates") }}
             </v-btn>
           </v-card-actions>
@@ -90,7 +92,9 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/preparationforsurgery"> See templates </v-btn>
+            <v-btn :to="'/category/preparationforsurgery/' + $i18n.locale">
+              {{ $t("templates.see_templates") }}
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -105,25 +109,14 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/xray"> See templates </v-btn>
+            <v-btn :to="'/category/xray/' + $i18n.locale">
+              {{ $t("templates.see_templates") }}
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col></v-row
     >
     <v-row align="center" justify="center">
-      <v-col cols="auto">
-        <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>Title</v-card-title>
-
-          <v-card-item>
-            <v-card-subtitle>sub room</v-card-subtitle>
-          </v-card-item>
-
-          <v-card-actions>
-            <v-btn>{{ $t("templates.init") }}</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
           <v-card-title>{{ $t("categories.other.title") }}</v-card-title>
@@ -135,7 +128,9 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/other"> See templates </v-btn>
+            <v-btn :to="'/category/other/' + $i18n.locale">
+              {{ $t("templates.see_templates") }}</v-btn
+            >
           </v-card-actions>
         </v-card>
       </v-col></v-row

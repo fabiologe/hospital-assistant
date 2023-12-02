@@ -59,7 +59,7 @@
     },
     "pre_operation": {
       "title": "Pre-Operative assesment",
-      "description": "nforming the patient about the operation and the processes included room"
+      "description": "Informing the patient about the operation and the processes included room"
     },
     "xray": {
       "title": "X-Ray",
