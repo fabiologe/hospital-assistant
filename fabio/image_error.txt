@@ -1,0 +1,43 @@
+PS C:\Users\fabio\Documents\VSCode\hackerton\hospital-assistant-main\fabio> node image_form.js
+(node:10352) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+RateLimitError: 429 Request too large for gpt-4-vision-preview in organization org-YvggZnp70n42raqaSleQhnQQ on tokens per min (TPM): Limit 10000, Requested 14580. The input or output tokens must be reduced in order to run successfully. Visit https://platform.openai.com/account/rate-limits to learn more.
+    at APIError.generate (file:///C:/Users/fabio/Documents/VSCode/hackerton/node_modules/openai/error.mjs:57:20)
+    at OpenAI.makeStatusError (file:///C:/Users/fabio/Documents/VSCode/hackerton/node_modules/openai/core.mjs:244:25)
+    at OpenAI.makeRequest (file:///C:/Users/fabio/Documents/VSCode/hackerton/node_modules/openai/core.mjs:283:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/fabio/Documents/VSCode/hackerton/node_modules/langchain/dist/chat_models/openai.js:629:29
+    at async RetryOperation._fn (C:\Users\fabio\Documents\VSCode\hackerton\node_modules\p-retry\index.js:50:12) {
+  status: 429,
+  headers: {
+    'alt-svc': 'h3=":443"; ma=86400',
+    'cf-cache-status': 'DYNAMIC',
+    'cf-ray': '82f1e683cdb32bf7-FRA',
+    connection: 'keep-alive',
+    'content-length': '419',
+    'content-type': 'application/json; charset=utf-8',
+    date: 'Sat, 02 Dec 2023 07:36:43 GMT',
+    server: 'cloudflare',
+    'set-cookie': '__cf_bm=89meejucDkuywVQ.FasuVtYui6bknIpwdEiKRqRoAyU-1701502603-0-AZMPVOxoVGxAvg3J62NoqfJLwnj6ac8pEGZwNGAssTzEhXTTqfQh86bOYJToy2I27AFeoJDxGbFzK4bv5ojNjQg=; path=/; expires=Sat, 02-Dec-23 08:06:43 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=Uz26hsTrznAfgCe8a92MYOQOsLIC13ZPrSbMJz6R.4g-1701502603040-0-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None',
+    'strict-transport-security': 'max-age=15724800; includeSubDomains',
+    vary: 'Origin',
+    'x-ratelimit-limit-requests': '500',
+    'x-ratelimit-limit-tokens': '10000',
+    'x-ratelimit-remaining-requests': '493',
+    'x-ratelimit-remaining-tokens': '10000',
+    'x-ratelimit-reset-requests': '18m46.418s',
+    'x-ratelimit-reset-tokens': '0s',
+    'x-request-id': '29791318ccad440fe67c0cc262912aac'
+  },
+  error: {
+    message: 'Request too large for gpt-4-vision-preview in organization org-YvggZnp70n42raqaSleQhnQQ on tokens per min (TPM): Limit 10000, Requested 14580. The input or output tokens must be reduced in order to run successfully. Visit https://platform.openai.com/account/rate-limits to learn more.',
+    type: 'tokens',
+    param: null,
+    code: 'rate_limit_exceeded'
+  },
+  code: 'rate_limit_exceeded',
+  param: null,
+  type: 'tokens',
+  attemptNumber: 7,
+  retriesLeft: 0
+}

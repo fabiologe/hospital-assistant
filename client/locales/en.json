@@ -13,6 +13,7 @@
           "mailchimp": "Mail Chimp",
           "slack": "Slack"
         }
+      
       },
       "notification": {
         "badge": "3",
@@ -51,6 +52,24 @@
         }
       }
     }
+  },
+  "categories":{
+      "department_emergency" : {
+          "title": "Emergency Department",
+          "description": "For the admission and treatment of a patient in an emergency room"
+          
+          }
+      },
+  "templates":{
+    "init": "See templates",
+    "type": {
+     "pre_operative": {
+      "title": "Pre-Operative assesment",
+      "description": "nforming the patient about the operation and the processes included room"
+     } 
+    }
+  }
+  
   },
   "menuitems": {
     "menu": {
