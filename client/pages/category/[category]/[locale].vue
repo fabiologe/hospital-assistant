@@ -9,7 +9,21 @@
         >Create Template</v-btn
       ></v-row
     >
-    <v-row>{{ templates }} </v-row>
+    <v-row v-for="template in templates" :key="template._id">
+      <v-col cols="12">
+        <v-card class="mx-auto" color="primary" variant="tonal">
+          <v-card-title>{{ template.name }}</v-card-title>
+
+          <v-card-item>
+            <v-card-subtitle>{{ template.description }}</v-card-subtitle>
+          </v-card-item>
+
+          <v-card-actions>
+            <v-btn :to="'/template/' + template._id"> Open Template </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col></v-row
+    >
   </v-container>
 </template>
 
@@ -25,12 +39,14 @@ export default defineNuxtComponent({
       error: null,
     };
   },
-  async asyncData({ params, app }) {
-    console.log(app.i18n);
+  async asyncData({ params }) {
     return {
       category: params.category,
       templates: await $fetch(
-        "https://health.tobi4s.dev/api/templates/category/"
+        "https://health.tobi4s.dev/api/templates/category/" +
+          params.category +
+          "/" +
+          params.locale
       ),
     };
   },

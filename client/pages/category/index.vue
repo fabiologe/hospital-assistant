@@ -51,7 +51,9 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/emergency"> See templates </v-btn>
+            <v-btn :to="'/category/emergency/' + $i18n.locale">
+              See templates
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -67,7 +69,7 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/preoperativeassessment"> See templates </v-btn>
+            <v-btn :to="'/category/preoperativeassessment/' + $i18n.locale"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col></v-row
@@ -85,7 +87,7 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/preparationforsurgery"> See templates </v-btn>
+            <v-btn :to="'/category/preparationforsurgery/' + $i18n.locale"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -100,7 +102,7 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/xray"> See templates </v-btn>
+            <v-btn :to="'/category/xray/' + $i18n.locale"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col></v-row
@@ -131,7 +133,7 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/category/other"> See templates </v-btn>
+            <v-btn :to="'/category/other/' + $i18n.locale"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col></v-row

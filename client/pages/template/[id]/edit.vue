@@ -1,10 +1,32 @@
 <template>
   <v-container>
+    <v-overlay :model-value="loading" class="align-center justify-center">
+      <v-progress-circular
+        color="primary"
+        persistent
+        indeterminate
+        size="64"
+      ></v-progress-circular>
+      <p style="color: black"><strong>Importing template...</strong></p>
+    </v-overlay>
+    <input
+      type="file"
+      style="display: none"
+      ref="fileUpload"
+      accept="image/*"
+      @change="onFilePicked"
+    />
     <v-row class="mb-5"
       ><v-btn color="primary" to="/category" variant="text"
         ><v-icon class="mr-1">mdi-arrow-left</v-icon>See categories</v-btn
       >
       <v-spacer></v-spacer
+      ><v-btn
+        color="primary"
+        variant="tonal"
+        @click="chooseFiles()"
+        class="mr-2"
+        >Upload Picture <v-icon class="ml-1">mdi-camera-enhance</v-icon></v-btn
       ><v-btn
         color="error"
         variant="outlined"
@@ -129,14 +151,17 @@ definePageMeta({ layout: "default" });
 export default defineNuxtComponent({
   data() {
     return {
-      template: [],
-      loading: false,
+      template: {},
+      templateId: "",
       error: null,
       categories: ["Category 1", "Category 2", "Category 3"],
+      loading: false,
+      checkInterval: null,
     };
   },
   async asyncData({ params }) {
     return {
+      templateId: params.id,
       template: await $fetch(
         "https://health.tobi4s.dev/api/templates/" + params.id
       ),
@@ -157,6 +182,49 @@ export default defineNuxtComponent({
     },
   },
   methods: {
+    async onFilePicked(e) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+
+      reader.onloadend = async () => {
+        const base64String = reader.result.split(",")[1]; // Get the base64 content, exclude the prefix
+
+        this.checkForVisionData();
+
+        await $fetch(
+          "https://health.tobi4s.dev/api/templates/" +
+            this.template._id +
+            "/doc",
+          {
+            method: "POST",
+            body: { base64: base64String },
+          }
+        );
+      };
+
+      reader.readAsDataURL(file); // Read the file
+    },
+    chooseFiles() {
+      this.$refs.fileUpload.click();
+    },
+    checkForVisionData() {
+      this.loading = true;
+      const id = this.templateId;
+      this.checkInterval = setInterval(async () => {
+        const template = await $fetch(
+          "https://health.tobi4s.dev/api/templates/" + id
+        );
+        console.log(template);
+        if (template.visionData && template.visionData.name) {
+          this.template.name = template.visionData.name;
+          this.template.description = template.visionData.description;
+          this.template.infoPoints = template.visionData.fields;
+          this.template.type = "Document";
+          clearInterval(this.checkInterval);
+          this.loading = false;
+        }
+      }, 1000);
+    },
     async editTemplate() {
       await $fetch(
         "https://health.tobi4s.dev/api/templates/" + this.template._id,
@@ -186,6 +254,15 @@ export default defineNuxtComponent({
 });
 </script>
 
-<style scoped>
+<style>
 /* Style here */
+.v-overlay .v-overlay__content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 12px;
+}
 </style>
