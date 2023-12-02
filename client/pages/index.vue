@@ -45,7 +45,7 @@ export default {
       </v-card-item>
 
       <v-card-actions>
-        <v-btn to="/categories"> See categories </v-btn>
+        <v-btn to="/category"> See categories </v-btn>
       </v-card-actions>
     </v-card>
     <v-card

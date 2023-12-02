@@ -1,4 +1,4 @@
-import { Template } from "./template";
-import { Chat } from "./chat";
+import { Template } from "./template.js";
+import { Chat } from "./chat.js";
 
-module.exports = { Template, Chat };
+export { Template, Chat };

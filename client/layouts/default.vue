@@ -5,7 +5,7 @@
     </v-app-bar>
 
     <v-main>
-      <v-container style="height: 100%;">
+      <v-container style="height: 100%">
         <slot />
       </v-container>
     </v-main>
@@ -16,9 +16,16 @@
 export default {
   data() {
     return {
-      drawer: false
-    }
-  }
-
-}
+      drawer: false,
+    };
+  },
+};
 </script>
+
+<style>
+.v-list {
+  -webkit-padding-start: 14px !important;
+  overflow-x: hidden !important;
+  padding-inline-start: 0px !important;
+}
+</style>

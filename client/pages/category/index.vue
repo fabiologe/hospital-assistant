@@ -28,7 +28,16 @@ export default {
 </script>
 
 <template>
-  <div class="options-wrapper">
+  <v-container>
+    <v-row class="mb-5"
+      ><v-btn color="primary" to="/" variant="text"
+        ><v-icon class="mr-1">mdi-arrow-left</v-icon>Back</v-btn
+      >
+      <v-spacer></v-spacer
+      ><v-btn color="success" variant="outlined" disabled
+        >Add Category</v-btn
+      ></v-row
+    >
     <v-row align="center" justify="center">
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
@@ -36,13 +45,13 @@ export default {
 
           <v-card-item>
             <v-card-subtitle
-              >For the admission and treatment of a patient in an emergency 
+              >For the admission and treatment of a patient in an emergency
               room</v-card-subtitle
             >
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/emergency"> See templates </v-btn>
+            <v-btn to="/category/emergency"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -52,13 +61,13 @@ export default {
 
           <v-card-item>
             <v-card-subtitle
-              >Informing the patient about the operation and the processes included
-              room</v-card-subtitle
+              >Informing the patient about the operation and the processes
+              included room</v-card-subtitle
             >
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/preoperativeassessment"> See templates </v-btn>
+            <v-btn to="/category/preoperativeassessment"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col></v-row
@@ -76,7 +85,7 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/preparationforsurgery"> See templates </v-btn>
+            <v-btn to="/category/preparationforsurgery"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -86,13 +95,12 @@ export default {
 
           <v-card-item>
             <v-card-subtitle
-              >Preparing the patient for X-ray
-              room</v-card-subtitle
+              >Preparing the patient for X-ray room</v-card-subtitle
             >
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/xray"> See templates </v-btn>
+            <v-btn to="/category/xray"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col></v-row
@@ -100,17 +108,14 @@ export default {
     <v-row align="center" justify="center">
       <v-col cols="auto">
         <v-card class="mx-auto" width="400" color="primary" variant="tonal">
-          <v-card-title>Pregnancy</v-card-title>
+          <v-card-title>Title</v-card-title>
 
           <v-card-item>
-            <v-card-subtitle
-              >For pregnancy related topics
-              room</v-card-subtitle
-            >
+            <v-card-subtitle>sub room</v-card-subtitle>
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/pregnancy"> See templates </v-btn>
+            <v-btn> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -126,12 +131,12 @@ export default {
           </v-card-item>
 
           <v-card-actions>
-            <v-btn to="/other"> See templates </v-btn>
+            <v-btn to="/category/other"> See templates </v-btn>
           </v-card-actions>
         </v-card>
       </v-col></v-row
     >
-  </div>
+  </v-container>
 </template>
 
 <style>

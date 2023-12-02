@@ -1,11 +1,15 @@
 import express from "express";
-import Template from "../models/index.js";
+import { Template } from "../models/index.js";
+import { setInfoPoints } from "../lib/index.js";
 
 const router = express.Router();
 
-router.get("/category/:category", async (req, res) => {
+router.get("/category/:category/:language", async (req, res) => {
   try {
-    const templates = await Template.find({ category: req.params.category });
+    const templates = await Template.find({
+      category: req.params.category,
+      language: req.params.language,
+    });
     res.json(templates);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -15,6 +19,7 @@ router.get("/category/:category", async (req, res) => {
 // Create
 router.post("/", async (req, res) => {
   try {
+    console.log(req.body);
     const newTemplate = new Template(req.body);
     const savedTemplate = await newTemplate.save();
     res.status(201).json(savedTemplate);
@@ -40,13 +45,11 @@ router.get("/:id", getTemplate, (req, res) => {
 
 // Update
 router.patch("/:id", getTemplate, async (req, res) => {
-  if (req.body.name != null) {
-    res.template.name = req.body.name;
-  }
-  // update other fields as necessary
   try {
-    const updatedTemplate = await res.template.save();
-    res.json(updatedTemplate);
+    console.log(req.body);
+    const infoPoints = await setInfoPoints(req.body);
+
+    await Template.findByIdAndUpdate(req.params.id, req.body).exec();
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
@@ -55,7 +58,7 @@ router.patch("/:id", getTemplate, async (req, res) => {
 // Delete
 router.delete("/:id", getTemplate, async (req, res) => {
   try {
-    await res.template.remove();
+    await Template.findByIdAndDelete(req.params.id).exec();
     res.json({ message: "Deleted Template" });
   } catch (err) {
     res.status(500).json({ message: err.message });

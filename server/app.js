@@ -3,9 +3,13 @@ import http from "http";
 import bodyParser from "body-parser";
 import { Server } from "socket.io";
 import initMongo from "./config/mongo.js";
+import cors from "cors";
+import templateRoutes from "./routes/template.js";
 
 const app = express();
 const server = http.createServer(app);
+
+app.use(cors());
 
 const io = new Server(server, {
   cors: {
@@ -16,6 +20,8 @@ const io = new Server(server, {
 });
 
 app.use(bodyParser.json());
+
+app.use("/templates", templateRoutes);
 
 app.get("/", (req, res) => {
   res.sendStatus(200);
