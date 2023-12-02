@@ -4,7 +4,7 @@ import { StructuredOutputParser} from 'langchain/output_parsers';
 import { ChatOpenAI } from "langchain/chat_models/openai";
 import { SystemMessage } from "langchain/schema";
 
-const imagePath = 'C:/Users/fabio/Documents/VSCode/hackerton/hospital-assistant-main/fabio/fomular_scan.jpg'; // Replace with the path to your image
+const imagePath = './fabio/fomular_scan.jpg'; // Replace with the path to your image
 const API_KEY =  "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"
 export const generateimageToJson  = async({imagePath, API_KEY}) => {
     try{
@@ -43,6 +43,6 @@ export const generateimageToJson  = async({imagePath, API_KEY}) => {
 // Example usage of the function
 
 
-generateimageToJson(imagePath, API_KEY)
+generateimageToJson({imagePath, API_KEY})
     .then(result => console.log('Analysis Result:', result))
     .catch(error => console.error('Error:', error))
